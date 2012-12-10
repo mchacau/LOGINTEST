@@ -45,3 +45,9 @@ function deviceReady() {
 $("#loginForm").on("submit",handleLogin);
 
 }
+
+function showAlert() {
+  localStorage.removeItem("username");
+  localStorage.removeItem("password");
+  $.mobile.changePage("index.html");
+    }

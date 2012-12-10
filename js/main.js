@@ -50,6 +50,6 @@ function showAlert() {
   localStorage.removeItem("username");
   localStorage.removeItem("password");
   $.mobile.changePage("index.html");
-          $("#username", form).val(window.localStorage["username"]);
-        $("#password", form).val(window.localStorage["password"]);
+          $("#username", form).val();
+        $("#password", form).val();
     }

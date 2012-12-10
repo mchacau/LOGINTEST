@@ -21,7 +21,7 @@ function handleLogin() {
     var p = $("#password", form).val();
     console.log("click");
     if(u != '' && p!= '') {
-        $.post("http://www.coldfusionjedi.com/demos/2011/nov/10/service.cfc?method=login&returnformat=json", {username:u,password:p}, function(res) {
+        $.post("http://www.mchac.com.au/aktiv/save.php", {username:u,password:p}, function(res) {
             if(res == true) {
                 //store
                 window.localStorage["username"] = u;

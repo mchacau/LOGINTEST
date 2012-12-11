@@ -38,7 +38,8 @@ function handleLogin() {
 }
 
 function deviceReady() {
-checkPreAuth();
+   checkPreAuth(); 
+$("#loginForm").on("submit",handleLogin);
 
 }
 

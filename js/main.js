@@ -7,9 +7,7 @@ delete init;
 function checkPreAuth() {
     var form = $("#loginForm");
     if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
-        $("#username", form).val(window.localStorage["username"]);
-        $("#password", form).val(window.localStorage["password"]);
-        handleLogin();
+navigator.notification.alert("login found", function() {});
     }
 }
 

@@ -7,6 +7,10 @@ delete init;
 function checkPreAuth() {
     if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
 alert("login found");
+hidediv();
+    }
+    else{
+    showdiv();
     }
 }
 
@@ -82,3 +86,32 @@ function showAlert() {
     ajaxRequest.open("GET", "http://www.mchac.com.au/aktiv/index.php" + queryString, true);
     ajaxRequest.send(null); 
 }
+
+
+function hidediv() { 
+if (document.getElementById) { // DOM3 = IE5, NS6 
+document.getElementById('hideShow').style.visibility = 'hidden'; 
+} 
+else { 
+if (document.layers) { // Netscape 4 
+document.hideShow.visibility = 'hidden'; 
+} 
+else { // IE 4 
+document.all.hideShow.style.visibility = 'hidden'; 
+} 
+} 
+}
+
+function showdiv() { 
+if (document.getElementById) { // DOM3 = IE5, NS6 
+document.getElementById('hideShow').style.visibility = 'visible'; 
+} 
+else { 
+if (document.layers) { // Netscape 4 
+document.hideShow.visibility = 'visible'; 
+} 
+else { // IE 4 
+document.all.hideShow.style.visibility = 'visible'; 
+} 
+} 
+} 

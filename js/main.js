@@ -6,11 +6,12 @@ delete init;
 
 function checkPreAuth() {
     if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
-alert("login found");
-hidediv();
+    document.getElementById('loggedOut').style.visibility = 'hidden'; 
+document.getElementById('loggedIn').style.visibility = 'visible'; 
     }
     else{
-    showdiv();
+document.getElementById('loggedIn').style.visibility = 'hidden';
+document.getElementById('loggedOut').style.visibility = 'visible'; 
     }
 }
 
@@ -27,7 +28,7 @@ function handleLogin() {
                 //store
                 window.localStorage["username"] = u;
                 window.localStorage["password"] = p;             
-                $.mobile.changePage("some.html");
+document.getElementById('loggedIn').style.visibility = 'visible'; 
             } else {
                 navigator.notification.alert("Your login failed", function() {});
             }
@@ -87,31 +88,3 @@ function showAlert() {
     ajaxRequest.send(null); 
 }
 
-
-function hidediv() { 
-if (document.getElementById) { // DOM3 = IE5, NS6 
-document.getElementById('hideShow').style.visibility = 'hidden'; 
-} 
-else { 
-if (document.layers) { // Netscape 4 
-document.hideShow.visibility = 'hidden'; 
-} 
-else { // IE 4 
-document.all.hideShow.style.visibility = 'hidden'; 
-} 
-} 
-}
-
-function showdiv() { 
-if (document.getElementById) { // DOM3 = IE5, NS6 
-document.getElementById('hideShow').style.visibility = 'visible'; 
-} 
-else { 
-if (document.layers) { // Netscape 4 
-document.hideShow.visibility = 'visible'; 
-} 
-else { // IE 4 
-document.all.hideShow.style.visibility = 'visible'; 
-} 
-} 
-} 

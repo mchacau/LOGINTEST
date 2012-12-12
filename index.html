@@ -20,8 +20,8 @@
         <h1>Auth Demo</h1>
     </div>
 
-    <div data-role="content" id="hideShow">    
-
+    <div data-role="content" >    
+<div id="loggedOut">
         <form id="loginForm">
         <div data-role="fieldcontain" class="ui-hide-label">
             <label for="username">Username:</label>
@@ -35,7 +35,14 @@
 
         <input type="submit" value="Login" id="submitButton">
         </form>
+        </div>
+        <div id="loggedIn">
         
+        <div id='ajaxDiv'>result will display here</div>
+     <a href="#" onclick="showAlert();">logout</a>
+        
+        
+        </div>
     </div>
 
     <div data-role="footer">

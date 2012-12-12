@@ -1,4 +1,6 @@
 function init() {
+    document.getElementById('loggedOut').style.visibility = 'hidden'; 
+    document.getElementById('loggedIn').style.visibility = 'hidden';
 document.addEventListener("deviceready", deviceReady, true);
 delete init;
 }
@@ -16,6 +18,7 @@ document.getElementById('loggedOut').style.visibility = 'visible';
 }
 
 function handleLogin() {
+    document.getElementById('loggedOut').style.visibility = 'hidden'; 
     var form = $("#loginForm");    
     //disable the button so we can't resubmit while we wait
     $("#submitButton",form).attr("disabled","disabled");
